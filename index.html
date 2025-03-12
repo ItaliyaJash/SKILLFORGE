@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKILLFORGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">
+                <div class="logo-circle">SF</div>
+                <span>SKILLFORGE</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#courses" class="nav-link">Courses</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#about" class="nav-link">About</a>
+                <button class="login-btn" onclick="toggleModal('loginModal')">Login</button>
+                <button class="signup-btn" onclick="toggleModal('signupModal')">Sign Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Build Your Future<br>With Skills That Matter</h1>
+                <p>Gujarat's premier skill development platform connecting learners with industry-relevant courses and opportunities.</p>
+                <div class="hero-buttons">
+                    <button class="primary-btn" onclick="scrollToSection('courses')">Explore Courses</button>
+                    <button class="secondary-btn">Learn More</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="Students learning">
+            </div>
+        </div>
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">1,000+</div>
+                <div class="stat-label">Active Learners</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Courses Available</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Expert Instructors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Employment Rate</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="section-header">
+            <h2>Explore Courses</h2>
+            <p>Discover skills to advance your career and future</p>
+        </div>
+        <div class="course-filters">
+            <button class="filter-btn active">All Courses</button>
+            <button class="filter-btn">Technology</button>
+            <button class="filter-btn">Healthcare</button>
+            <button class="filter-btn">Agriculture</button>
+            <button class="filter-btn">Business</button>
+            <button class="filter-btn">Manufacturing</button>
+        </div>
+        <div class="course-grid">
+            <!-- Course cards will be dynamically populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="section-header">
+            <h2>Your Learning Dashboard</h2>
+            <p>Track your progress and manage your learning journey</p>
+        </div>
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Courses Enrolled</h3>
+                <div class="stat-value">3</div>
+                <div class="stat-change">+1 from last month</div>
+            </div>
+            <div class="stat-card">
+                <h3>Certificates Earned</h3>
+                <div class="stat-value">2</div>
+                <div class="stat-change">+1 from last month</div>
+            </div>
+            <div class="stat-card">
+                <h3>Learning Hours</h3>
+                <div class="stat-value">47.5</div>
+                <div class="stat-change">+12.5 from last month</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-header">
+            <h2>About SKILLFORGE</h2>
+            <p>Building Gujarat's future workforce through accessible, industry-relevant skill development</p>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Mission</h3>
+                <p>SKILLFORGE is a pioneering initiative by the Government of Gujarat aimed at bridging the skills gap by providing accessible, high-quality training aligned with industry needs.</p>
+                <p>We believe in democratizing education and creating pathways to employment for all citizens of Gujarat, regardless of their background or prior educational experience.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="About SkillForge">
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <h2>Login to SKILLFORGE</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+            <button class="close-btn" onclick="toggleModal('loginModal')">Close</button>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <h2>Create your SKILLFORGE account</h2>
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="signupName">Full Name</label>
+                    <input type="text" id="signupName" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupEmail">Email</label>
+                    <input type="email" id="signupEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="signupPassword">Password</label>
+                    <input type="password" id="signupPassword" required>
+                </div>
+                <button type="submit" class="primary-btn">Create Account</button>
+            </form>
+            <button class="close-btn" onclick="toggleModal('signupModal')">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
